@@ -27,10 +27,17 @@ button {
   border-radius: 8px;
 }
 
-button[type="button"] {
+.secondary-button {
   background-color: var(--secondary-color);
   color: #333;
   border: 1px solid #ddd;
+}
+
+.comprobante {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  gap: 10px;
 }
 
 ul {
@@ -69,6 +76,11 @@ li button {
 .card p {
   color: #666;
   margin: 0.2rem 0;
+}
+
+.agregar-producto {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 @media (min-width: 768px) {

@@ -121,6 +121,10 @@ function App() {
     }
   };
 
+  const handleEliminarVenta = (index) => {
+    setVentas(ventas.filter((_, i) => i !== index));
+  };
+
   return (
     <div className="App">
       <header>
@@ -132,11 +136,7 @@ function App() {
       <div className="ventas-container">
         <div className="ventas">
           {ventas.map((venta, index) => (
-            <div
-              key={index}
-              className="venta-card"
-              onClick={() => handleEditarVenta(venta, index)}
-            >
+            <div key={index} className="venta-card">
               <p>Nombre: {venta.nombre}</p>
               <p>Tipo de pago: {venta.tipoPago}</p>
               <p>Total: ${venta.total}</p>
@@ -145,6 +145,14 @@ function App() {
               {venta.tipoVenta === "reventa" && (
                 <p>Tipo de reventa: {venta.tipoReventa}</p>
               )}
+              <div className="venta-card-actions">
+                <button onClick={() => handleEditarVenta(venta, index)}>
+                  Editar venta
+                </button>
+                <button onClick={() => handleEliminarVenta(index)}>
+                  Eliminar venta
+                </button>
+              </div>
             </div>
           ))}
         </div>
@@ -177,7 +185,7 @@ function App() {
             onChange={(e) => setPassword(e.target.value)}
           />
           {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
-          <div>
+          <div className="password-actions">
             <button onClick={handleSendEmail}>Confirmar</button>
             <button onClick={() => setPasswordModalOpen(false)}>
               Cancelar

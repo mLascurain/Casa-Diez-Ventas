@@ -71,7 +71,6 @@ const Formulario = ({ onSubmit, initialData = {}, onCancel }) => {
     <form onSubmit={handleSubmit}>
       <h3>Registrar Nueva Venta</h3>
 
-      {/* Nombre */}
       <div>
         <label htmlFor="nombre">Nombre del cliente (opcional):</label>
         <input
@@ -82,7 +81,6 @@ const Formulario = ({ onSubmit, initialData = {}, onCancel }) => {
         />
       </div>
 
-      {/* Selección de productos */}
       <div>
         <label htmlFor="producto">Producto:</label>
         <select
@@ -110,7 +108,11 @@ const Formulario = ({ onSubmit, initialData = {}, onCancel }) => {
           min="1"
         />
       </div>
-      <button type="button" onClick={agregarProducto}>
+      <button
+        className="agregar-producto"
+        type="button"
+        onClick={agregarProducto}
+      >
         Agregar producto
       </button>
       <ul>
@@ -124,7 +126,6 @@ const Formulario = ({ onSubmit, initialData = {}, onCancel }) => {
         ))}
       </ul>
 
-      {/* Tipo de Pago */}
       <div>
         <label>Tipo de pago:</label>
         <select value={tipoPago} onChange={(e) => setTipoPago(e.target.value)}>
@@ -136,10 +137,9 @@ const Formulario = ({ onSubmit, initialData = {}, onCancel }) => {
         </select>
       </div>
 
-      {/* Comprobante (visible solo si es Mercado Pago) */}
       {tipoPago === "mp" && (
         <div>
-          <label>
+          <label className="comprobante">
             Comprobante chequeado
             <input
               type="checkbox"
@@ -150,7 +150,6 @@ const Formulario = ({ onSubmit, initialData = {}, onCancel }) => {
         </div>
       )}
 
-      {/* Entregado */}
       <div>
         <label>
           Entregado
@@ -162,7 +161,6 @@ const Formulario = ({ onSubmit, initialData = {}, onCancel }) => {
         </label>
       </div>
 
-      {/* Tipo de Venta */}
       <div>
         <label>Tipo de venta:</label>
         <select
@@ -178,7 +176,6 @@ const Formulario = ({ onSubmit, initialData = {}, onCancel }) => {
         </select>
       </div>
 
-      {/* Tipo de Reventa (visible solo si es reventa) */}
       {tipoVenta === "reventa" && (
         <div>
           <label>Tipo de reventa:</label>
@@ -195,7 +192,6 @@ const Formulario = ({ onSubmit, initialData = {}, onCancel }) => {
         </div>
       )}
 
-      {/* Observaciones */}
       <div>
         <label htmlFor="observaciones">Observaciones (opcional):</label>
         <textarea
@@ -206,7 +202,7 @@ const Formulario = ({ onSubmit, initialData = {}, onCancel }) => {
       </div>
 
       <button type="submit">Guardar Venta</button>
-      <button type="button" onClick={onCancel}>
+      <button className="secondary-button" type="button" onClick={onCancel}>
         Cancelar
       </button>
     </form>
