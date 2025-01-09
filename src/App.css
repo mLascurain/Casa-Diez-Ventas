@@ -115,6 +115,8 @@ form {
 
 label {
   font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 input[type="text"],
@@ -128,7 +130,8 @@ textarea {
 
 input[type="checkbox"] {
   transform: scale(1.8);
-  margin-right: 10px;
+  display: block;
+  max-width: 15px;
 }
 
 textarea {

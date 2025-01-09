@@ -41,6 +41,7 @@ function App() {
   const [isPasswordModalOpen, setPasswordModalOpen] = useState(false);
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+
   const handleNuevaVenta = (data) => {
     const total = data.productos.reduce((acc, producto) => {
       return acc + obtenerPrecioProducto(producto.nombre) * producto.cantidad;

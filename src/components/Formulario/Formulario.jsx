@@ -24,9 +24,9 @@ const Formulario = ({ onSubmit, initialData = {}, onCancel }) => {
     "Bruma Armonizacion",
     "Bruma Concentracion",
     "Bruma Meditacion",
-    "Rollon Bienestar",
-    "Rollon Calma",
-    "Rollon Energia",
+    "Roll on Bienestar",
+    "Roll on Calma",
+    "Roll on Energia",
     "Tisana Luna",
     "Tisana Sol",
     "Protector Solar",
@@ -138,27 +138,23 @@ const Formulario = ({ onSubmit, initialData = {}, onCancel }) => {
       </div>
 
       {tipoPago === "mp" && (
-        <div>
-          <label className="comprobante">
-            Comprobante chequeado
-            <input
-              type="checkbox"
-              checked={comprobante}
-              onChange={(e) => setComprobante(e.target.checked)}
-            />
-          </label>
+        <div className="checkbox-div">
+          <label className="comprobante">Comprobante chequeado</label>
+          <input
+            type="checkbox"
+            checked={comprobante}
+            onChange={(e) => setComprobante(e.target.checked)}
+          />
         </div>
       )}
 
-      <div>
-        <label>
-          Entregado
-          <input
-            type="checkbox"
-            checked={entregado}
-            onChange={(e) => setEntregado(e.target.checked)}
-          />
-        </label>
+      <div className="checkbox-div">
+        <label>Entregado</label>
+        <input
+          type="checkbox"
+          checked={entregado}
+          onChange={(e) => setEntregado(e.target.checked)}
+        />
       </div>
 
       <div>
