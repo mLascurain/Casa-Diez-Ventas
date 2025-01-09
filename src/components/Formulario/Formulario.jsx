@@ -140,12 +140,12 @@ const Formulario = ({ onSubmit, initialData = {}, onCancel }) => {
       {tipoPago === "mp" && (
         <div>
           <label>
+            Comprobante chequeado
             <input
               type="checkbox"
               checked={comprobante}
               onChange={(e) => setComprobante(e.target.checked)}
             />
-            Comprobante chequeado
           </label>
         </div>
       )}
@@ -153,12 +153,12 @@ const Formulario = ({ onSubmit, initialData = {}, onCancel }) => {
       {/* Entregado */}
       <div>
         <label>
+          Entregado
           <input
             type="checkbox"
             checked={entregado}
             onChange={(e) => setEntregado(e.target.checked)}
           />
-          Entregado
         </label>
       </div>
 

@@ -17,7 +17,7 @@ const precios = {
 
 const categorias = {
   brumas: ["Bruma Armonizacion", "Bruma Concentracion", "Bruma Meditacion"],
-  rollons: ["Rollon Bienestar", "Rollon Calma", "Rollon Energia"],
+  rollons: ["Roll on Bienestar", "Roll on Calma", "Roll on Energia"],
   tisanas: ["Tisana Luna", "Tisana Sol"],
   protectorSolar: ["Protector Solar"],
   repelenteInsectos: ["Repelente de Insectos"],
@@ -172,7 +172,7 @@ function App() {
           <h2>Confirmar contraseña</h2>
           <input
             type="password"
-            placeholder="Introduce tu contraseña"
+            placeholder="Introduci la contraseña"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
