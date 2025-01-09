@@ -92,7 +92,7 @@ li button {
 
 @media (min-width: 768px) {
   .card {
-    max-width: calc(50% - 1rem); /* Dos columnas en pantallas más grandes */
+    max-width: calc(50% - 1rem);
     margin: 0.5rem;
   }
 }

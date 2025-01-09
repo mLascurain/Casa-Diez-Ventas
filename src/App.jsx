@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "./components/Modal/Modal";
 import Formulario from "./components/Formulario/Formulario";
 import Logo from "./assets/Logo.png";
@@ -36,11 +36,19 @@ const obtenerPrecioProducto = (nombreProducto) => {
 
 function App() {
   const [isModalOpen, setModalOpen] = useState(false);
-  const [ventas, setVentas] = useState([]);
+  const [ventas, setVentas] = useState(() => {
+    const savedVentas = localStorage.getItem("ventas");
+    return savedVentas ? JSON.parse(savedVentas) : [];
+  });
   const [editData, setEditData] = useState(null);
   const [isPasswordModalOpen, setPasswordModalOpen] = useState(false);
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+
+  // Sincroniza las ventas con Local Storage
+  useEffect(() => {
+    localStorage.setItem("ventas", JSON.stringify(ventas));
+  }, [ventas]);
 
   const handleNuevaVenta = (data) => {
     const total = data.productos.reduce((acc, producto) => {
@@ -116,6 +124,8 @@ function App() {
   const handleSendEmail = () => {
     if (password === import.meta.env.VITE_PASSWORD) {
       window.location.href = generateEmailLink();
+      setVentas([]);
+      localStorage.removeItem("ventas");
       setPasswordModalOpen(false);
     } else {
       setErrorMessage("Contraseña incorrecta. Inténtalo de nuevo.");

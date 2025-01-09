@@ -17,8 +17,8 @@
   border-radius: 10px;
   width: 90%;
   max-width: 500px;
-  max-height: 80%; /* Limitar la altura */
-  overflow-y: auto; /* Hacer scroll si el contenido es largo */
+  max-height: 80%;
+  overflow-y: auto;
   box-shadow: 0 4px 6px var(--shadow-color);
   animation: fadeIn 0.3s ease-out;
 }

@@ -20,6 +20,7 @@ const Formulario = ({ onSubmit, initialData = {}, onCancel }) => {
   const [producto, setProducto] = useState("");
   const [cantidad, setCantidad] = useState("");
 
+  // Ojo se debe agregar aca tanto en el App.jsx los cambios en los productos
   const productos = [
     "Bruma Armonizacion",
     "Bruma Concentracion",
