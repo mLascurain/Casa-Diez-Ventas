@@ -18,7 +18,7 @@ const Formulario = ({ onSubmit, initialData = {}, onCancel }) => {
     initialData.productos || []
   );
   const [producto, setProducto] = useState("");
-  const [cantidad, setCantidad] = useState("");
+  const [cantidad, setCantidad] = useState("1");
 
   // Ojo se debe agregar aca tanto en el App.jsx los cambios en los productos
   const productos = [
@@ -43,7 +43,7 @@ const Formulario = ({ onSubmit, initialData = {}, onCancel }) => {
         { nombre: producto, cantidad: parseInt(cantidad) },
       ]);
       setProducto("");
-      setCantidad("");
+      setCantidad("1");
     }
   };
 
