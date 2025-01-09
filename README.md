@@ -1,6 +1,7 @@
-### Casa Diez Ventas
+## Casa Diez Ventas
 
-![Logo](https://github.com/user-attachments/assets/8103b70d-4165-4552-929f-93b81fedd31c)
+
+<img src="https://github.com/user-attachments/assets/8103b70d-4165-4552-929f-93b81fedd31c" alt="Logo Casa Diez" width="383" height="383">
 
 
 ![image](https://github.com/user-attachments/assets/8891772c-4cdb-4a28-a557-ee5e5cac337b)
