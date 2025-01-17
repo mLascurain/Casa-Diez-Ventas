@@ -9,6 +9,6 @@
 <br>
 <img src="https://github.com/user-attachments/assets/186a11fe-1454-4b25-b167-a97ed3acb836" alt="Vista de app movil" width="380" height="auto">
 
-### Video mostrando la aplicacion
+## Video mostrando la aplicacion
 
 https://github.com/user-attachments/assets/32c33fcd-fdb0-401f-82b1-8b5201b75879
