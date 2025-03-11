@@ -11,7 +11,7 @@ const precios = {
   tisanas: 5800,
   protectorSolar: 7500,
   repelenteInsectos: 6600,
-  tonicoFacial: 6000,
+  tonicoFacial: 5500,
   serumPuntas: 6500,
 };
 
